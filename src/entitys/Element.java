@@ -104,8 +104,8 @@ public class Element {
         return clickEnable;
     }
 
-    public void setClickEnable(boolean clickEnable) {
-        this.clickEnable = clickEnable;
+    public void setClickEnable() {
+        this.clickEnable = true;
     }
 
     public boolean isClickable() {
@@ -156,6 +156,8 @@ public class Element {
                     sb.append(Util.firstToUpperCase(names[i]));
                 }
                 fieldName = sb.toString();
+            } else if (fieldNameType == 1) {
+                fieldName = id;
             }
             this.fieldName = fieldName;
         }
